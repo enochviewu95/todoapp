@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Todo = ({setTodo,todos,todo,text}) =>{ 
     
     return (

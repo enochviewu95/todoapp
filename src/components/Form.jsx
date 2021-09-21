@@ -24,15 +24,15 @@ const Form = ({ inputText, todos, setTodos, setInputText, setStatus }) => {
 
     return (
         <form>
-            <div className="d-flex m-3">
+            <div className="d-flex">
                 <div className="input-group">
                     <input value={inputText} type="text" className="form-control" onChange={inputTextHandler} placeholder="Add Todo..." />
                     <button type="button" onClick={submitTodoHandler} className="btn btn-primary">
                         <i><FontAwesomeIcon icon={faPlusSquare} /></i>
                     </button>
                 </div>
-                <div className="w-50">
-                    <select className="form-select ms-2" onChange={statusHandler} name="todos" id="">
+                <div>
+                    <select className="form-select w-auto ms-2" onChange={statusHandler} name="todos" id="">
                         <option value="all">All</option>
                         <option value="completed">Completed</option>
                         <option value="uncompleted">Uncompleted</option>

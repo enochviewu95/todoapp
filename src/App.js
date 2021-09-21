@@ -38,8 +38,8 @@ function App() {
   },[todos,status])
 
   return (
-    <div className="container-md">
-      <header className="m-3">
+    <div className="container-sm p-3 vw-75">
+      <header>
         <h1>What's up</h1>
       </header>
       <main>

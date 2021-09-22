@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
-import '../styles/form.css'
 
 const Form = ({ inputText, todos, setTodos, setInputText, setStatus }) => {
 
@@ -12,7 +11,7 @@ const Form = ({ inputText, todos, setTodos, setInputText, setStatus }) => {
     const submitTodoHandler = (e) => {
         e.preventDefault();
         setTodos([
-            ...todos, { text: inputText, completed: false }
+            ...todos, { text: inputText, completed: false,id: Math.floor((Math.random()*1000)) }
         ]);
         setInputText('');
     }

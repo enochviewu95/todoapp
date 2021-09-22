@@ -11,6 +11,19 @@ function App() {
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
+  useEffect(()=>{
+
+    const getLocalTodos = () =>{
+      if(localStorage.getItem('todos') === null){
+        localStorage.setItem('todos',JSON.stringify([]));
+      }else{
+        let todoLocal = JSON.parse(localStorage.getItem('todos',JSON.stringify(todos)));
+        setTodos(todoLocal);
+      }
+    }
+
+    getLocalTodos();
+  },[])
 
   useEffect(()=>{
     const filteredHandler = () =>{
@@ -37,8 +50,9 @@ function App() {
 
   },[todos,status])
 
+
   return (
-    <div className="container-sm p-3 vw-75">
+    <div className="app container-sm vw-75">
       <header>
         <h1>What's up</h1>
       </header>

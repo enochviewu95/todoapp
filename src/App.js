@@ -53,8 +53,8 @@ function App() {
 
   return (
     <div className="app container-sm vw-75">
-      <header>
-        <h1>What's up</h1>
+      <header className="p-2">
+        <h1 className="text-center">What's up</h1>
       </header>
       <main>
         <Form
